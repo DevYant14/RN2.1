@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Semáforo de Transparencia | Universidad Estatal de Bolívar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="styles.css"> <!-- respaldo si el archivo está junto a index.html -->
+</head>
+<body>
+
+  <!-- Fondo decorativo -->
+  <div class="bg" aria-hidden="true">
+    <span class="blob blob--rojo"></span>
+    <span class="blob blob--amarillo"></span>
+    <span class="blob blob--verde"></span>
+    <span class="grid"></span>
+  </div>
+
+  <!-- Barra de progreso de scroll -->
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+
+  <!-- Navegación flotante -->
+  <nav class="nav" aria-label="Secciones">
+    <a href="#inicio" class="is-active">Inicio</a>
+    <a href="#semaforo">Semáforo</a>
+    <a href="#caso">Caso de ética</a>
+  </nav>
+
+  <!-- ============ 1. PRESENTACIÓN (ENCABEZADO) ============ -->
+  <header id="inicio" class="hero section">
+    <div class="hero__copy">
+      <div class="logo-wrap">
+        <!-- Logo oficial de la UEB (se carga desde ueb.edu.ec).
+             Para usarlo sin internet: descárgalo y guárdalo como assets/logo-ueb.png -->
+        <img id="logo" src="https://www.ueb.edu.ec/assets/images/logo/f.png?v=1783096329" alt="Logo Universidad Estatal de Bolívar" width="997" height="303">
+      </div>
+
+      <h1 class="uni">Universidad Estatal de Bolívar</h1>
+      <p class="uni-sub">Guaranda, Ecuador</p>
+
+      <!-- ✏️ Título del trabajo -->
+      <p class="trabajo">Semáforo de transparencia de una institución pública</p>
+
+      <dl class="docente spot">
+        <dt>Docente</dt>
+        <dd>Nombre del docente</dd> <!-- ✏️ -->
+      </dl>
+    </div>
+
+    <!-- Semáforo animado decorativo -->
+    <div class="hero__light" aria-hidden="true">
+      <div class="tl">
+        <span class="tl__lamp tl__lamp--rojo"></span>
+        <span class="tl__lamp tl__lamp--amarillo"></span>
+        <span class="tl__lamp tl__lamp--verde"></span>
+      </div>
+      <span class="tl__pole"></span>
+    </div>
+
+    <!-- ✏️ Integrantes -->
+    <ul class="team">
+      <li class="member spot reveal"><span class="avatar">E1</span><div><strong>Nombre Estudiante 1</strong><small>Integrante</small></div></li>
+      <li class="member spot reveal"><span class="avatar">E2</span><div><strong>Nombre Estudiante 2</strong><small>Integrante</small></div></li>
+      <li class="member spot reveal"><span class="avatar">E3</span><div><strong>Nombre Estudiante 3</strong><small>Integrante</small></div></li>
+      <li class="member spot reveal"><span class="avatar">E4</span><div><strong>Nombre Estudiante 4</strong><small>Integrante</small></div></li>
+    </ul>
+
+    <a class="scroll-hint" href="#semaforo" aria-label="Ir al semáforo"><span></span></a>
+  </header>
+
+  <main>
+    <!-- ============ 2. SEMÁFORO ============ -->
+    <section id="semaforo" class="section">
+      <div class="section__head reveal">
+        <h2>Semáforo de la institución</h2>
+        <p>Qué tan fácil fue encontrar cada dato en la página web.</p>
+      </div>
+
+      <div class="inst spot reveal">
+        <span>Institución pública analizada</span>
+        <strong>Nombre de la institución</strong> <!-- ✏️ -->
+      </div>
+
+      <div class="semaforo">
+        <div class="criterios">
+
+          <article class="criterio spot reveal" data-estado="">
+            <!-- ✏️ Para dejar el semáforo ya marcado escribe data-estado="verde", "amarillo" o "rojo" -->
+            <header>
+              <span class="icon"><svg viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+              <div><h3>¿Quién es la autoridad?</h3><p>Nombre y cargo de la máxima autoridad</p></div>
+            </header>
+
+            <div class="info">
+              <p class="info__label">Lo que encontramos</p>
+              <p class="info__texto">Escribe aquí la información encontrada.</p> <!-- ✏️ -->
+              <a class="info__link" href="https://" target="_blank" rel="noopener">Ver fuente en la web</a> <!-- ✏️ enlace -->
+            </div>
+
+            <footer>
+              <div class="tl tl--mini tl--pick" role="radiogroup" aria-label="Qué tan fácil fue encontrarlo">
+                <button type="button" class="tl__lamp tl__lamp--rojo" data-color="rojo" role="radio" aria-checked="false" aria-label="Difícil o no está" title="Difícil o no está"></button>
+                <button type="button" class="tl__lamp tl__lamp--amarillo" data-color="amarillo" role="radio" aria-checked="false" aria-label="Con esfuerzo" title="Con esfuerzo"></button>
+                <button type="button" class="tl__lamp tl__lamp--verde" data-color="verde" role="radio" aria-checked="false" aria-label="Fácil de encontrar" title="Fácil de encontrar"></button>
+              </div>
+              <span class="estado-txt">Selecciona un color</span>
+            </footer>
+          </article>
+
+          <article class="criterio spot reveal" data-estado="">
+            <!-- ✏️ Para dejar el semáforo ya marcado escribe data-estado="verde", "amarillo" o "rojo" -->
+            <header>
+              <span class="icon"><svg viewBox="0 0 24 24"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg></span>
+              <div><h3>¿En qué se gasta el dinero?</h3><p>Presupuesto, gastos o contratación</p></div>
+            </header>
+
+            <div class="info">
+              <p class="info__label">Lo que encontramos</p>
+              <p class="info__texto">Escribe aquí la información encontrada.</p> <!-- ✏️ -->
+              <a class="info__link" href="https://" target="_blank" rel="noopener">Ver fuente en la web</a> <!-- ✏️ enlace -->
+            </div>
+
+            <footer>
+              <div class="tl tl--mini tl--pick" role="radiogroup" aria-label="Qué tan fácil fue encontrarlo">
+                <button type="button" class="tl__lamp tl__lamp--rojo" data-color="rojo" role="radio" aria-checked="false" aria-label="Difícil o no está" title="Difícil o no está"></button>
+                <button type="button" class="tl__lamp tl__lamp--amarillo" data-color="amarillo" role="radio" aria-checked="false" aria-label="Con esfuerzo" title="Con esfuerzo"></button>
+                <button type="button" class="tl__lamp tl__lamp--verde" data-color="verde" role="radio" aria-checked="false" aria-label="Fácil de encontrar" title="Fácil de encontrar"></button>
+              </div>
+              <span class="estado-txt">Selecciona un color</span>
+            </footer>
+          </article>
+
+          <article class="criterio spot reveal" data-estado="">
+            <!-- ✏️ Para dejar el semáforo ya marcado escribe data-estado="verde", "amarillo" o "rojo" -->
+            <header>
+              <span class="icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+              <div><h3>¿Cómo contactarlos?</h3><p>Teléfono, correo, dirección o formulario</p></div>
+            </header>
+
+            <div class="info">
+              <p class="info__label">Lo que encontramos</p>
+              <p class="info__texto">Escribe aquí la información encontrada.</p> <!-- ✏️ -->
+              <a class="info__link" href="https://" target="_blank" rel="noopener">Ver fuente en la web</a> <!-- ✏️ enlace -->
+            </div>
+
+            <footer>
+              <div class="tl tl--mini tl--pick" role="radiogroup" aria-label="Qué tan fácil fue encontrarlo">
+                <button type="button" class="tl__lamp tl__lamp--rojo" data-color="rojo" role="radio" aria-checked="false" aria-label="Difícil o no está" title="Difícil o no está"></button>
+                <button type="button" class="tl__lamp tl__lamp--amarillo" data-color="amarillo" role="radio" aria-checked="false" aria-label="Con esfuerzo" title="Con esfuerzo"></button>
+                <button type="button" class="tl__lamp tl__lamp--verde" data-color="verde" role="radio" aria-checked="false" aria-label="Fácil de encontrar" title="Fácil de encontrar"></button>
+              </div>
+              <span class="estado-txt">Selecciona un color</span>
+            </footer>
+          </article>
+
+          <article class="criterio spot reveal" data-estado="">
+            <!-- ✏️ Para dejar el semáforo ya marcado escribe data-estado="verde", "amarillo" o "rojo" -->
+            <header>
+              <span class="icon"><svg viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 13h4M10 17h4"/></svg></span>
+              <div><h3>¿Hay informes o rendición de cuentas?</h3><p>Documentos públicos disponibles</p></div>
+            </header>
+
+            <div class="info">
+              <p class="info__label">Lo que encontramos</p>
+              <p class="info__texto">Escribe aquí la información encontrada.</p> <!-- ✏️ -->
+              <a class="info__link" href="https://" target="_blank" rel="noopener">Ver fuente en la web</a> <!-- ✏️ enlace -->
+            </div>
+
+            <footer>
+              <div class="tl tl--mini tl--pick" role="radiogroup" aria-label="Qué tan fácil fue encontrarlo">
+                <button type="button" class="tl__lamp tl__lamp--rojo" data-color="rojo" role="radio" aria-checked="false" aria-label="Difícil o no está" title="Difícil o no está"></button>
+                <button type="button" class="tl__lamp tl__lamp--amarillo" data-color="amarillo" role="radio" aria-checked="false" aria-label="Con esfuerzo" title="Con esfuerzo"></button>
+                <button type="button" class="tl__lamp tl__lamp--verde" data-color="verde" role="radio" aria-checked="false" aria-label="Fácil de encontrar" title="Fácil de encontrar"></button>
+              </div>
+              <span class="estado-txt">Selecciona un color</span>
+            </footer>
+          </article>
+
+        </div>
+
+        <!-- Resultado general (se calcula solo) -->
+        <aside class="resultado spot reveal" aria-live="polite">
+          <h3>Resultado general</h3>
+          <div class="tl tl--mini" id="tlResultado" data-estado="">
+            <span class="tl__lamp tl__lamp--rojo"></span>
+            <span class="tl__lamp tl__lamp--amarillo"></span>
+            <span class="tl__lamp tl__lamp--verde"></span>
+          </div>
+          <p class="veredicto" id="veredicto">Pendiente</p>
+          <ul class="conteo">
+            <li class="c-verde"><b id="nVerde">0</b><span>Fácil</span></li>
+            <li class="c-amarillo"><b id="nAmarillo">0</b><span>Con esfuerzo</span></li>
+            <li class="c-rojo"><b id="nRojo">0</b><span>Difícil</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ 3. CASO DE ÉTICA ============ -->
+    <section id="caso" class="section">
+      <div class="section__head reveal">
+        <h2>Caso de ética</h2>
+        <p>Análisis del caso entregado por el docente.</p>
+      </div>
+
+      <article class="caso spot reveal">
+        <h3>Título del caso</h3> <!-- ✏️ -->
+        <p>Escribe aquí la situación planteada en el caso.</p> <!-- ✏️ -->
+      </article>
+
+      <div class="respuestas">
+        <article class="resp resp--mal spot reveal">
+          <h3>¿Qué está mal aquí?</h3>
+          <!-- ✏️ Puedes usar varios <p> o una lista <ul><li>…</li></ul> -->
+          <p>Escribe aquí qué está mal en el caso.</p>
+        </article>
+        <article class="resp resp--bien spot reveal">
+          <h3>¿Qué se debería hacer?</h3>
+          <p>Escribe aquí qué se debería hacer.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Universidad Estatal de Bolívar · Guaranda, Ecuador</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="script.js"></script> <!-- respaldo si el archivo está junto a index.html -->
+</body>
+</html>
